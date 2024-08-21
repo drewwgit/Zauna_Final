@@ -1,0 +1,11 @@
+{
+    "name": "zauna_final",
+    "private": true,
+    "scripts": {
+      "client": "cd client && npm run dev",
+      "server": "cd server && npm run start:dev",
+      "seed": "cd server && npm run seed",
+      "build": "cd client && npm run build"
+    },
+    "dependencies": {}
+  }

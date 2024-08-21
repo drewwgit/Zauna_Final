@@ -1,0 +1,879 @@
+.nunito-googleFont {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+* {
+    font-family: Nunito, sans-serif;  
+}
+
+#root {
+    flex: 1; 
+    padding-top: 200px; 
+    height: 100%;
+}
+
+html, body {
+    margin: 0; 
+    font-size: 19px; 
+    color:black;
+}
+
+body {
+  display: flex; 
+  flex-direction: column;
+}
+
+.content {
+  padding: 20px;
+}
+
+
+nav {
+    margin: 0;
+    height: 200px; 
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: [first] 25% [line2] 50% [line3] 25%;
+}
+
+nav > .zaunahomelogo {
+    margin-top: 25px;
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+}
+
+ .zaunahomelogo > img {
+    height: 150px;
+}
+
+a.aboutus {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size:larger;
+    text-decoration: none;
+}
+
+a.aboutus:hover {
+    color: #349eeb;
+}
+
+nav > h1 {
+    padding-top: 20%;
+    color: white;
+    padding-left: 15px;
+}
+
+div.navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HAMBURGER MENU STYLING */
+
+.hamburger-menu {
+  position: relative;
+}
+
+.menu-icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: #ffffff; 
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  margin-top: 70px;
+  margin-right: 70px;
+}
+
+.menu-icon:hover {
+color: #349eeb;
+}
+
+.nav-menu {
+  margin-top: 5px; 
+  margin-bottom: 10px; 
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00000050;
+  position: absolute;
+  width: 100px;
+  height: 100px; 
+  border-radius: 25px;
+  z-index: 9; 
+}
+
+.nav-menu.active {
+  display: flex;
+  height: 150px; 
+  width: 150px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  margin: 1rem 0;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: medium; 
+}
+
+.nav-menu ul li a:hover {
+  color: #349eeb;
+}
+
+
+/* FOOTER STYLING */
+.footer {
+  background: #000;
+  padding: 20px 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer ul li {
+  margin: 0 10px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+
+}
+
+.footer ul li a:hover {
+  color: #349eeb;
+}
+
+/* DIV HOME PAGE STYLING */
+
+.section {
+  position: relative;
+  height: 100vh; 
+  background-size: cover; 
+  background-position: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.section.section-1 > .overlay > div.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  background-color: #00000067;
+}
+
+.section.section-2 > .overlay > div.content-wrapper {
+  border-radius: 50px;
+  padding: 30px;
+  background-color: #00000067;
+  margin-left: 20px; 
+}
+
+.section.section-3 > .overlay > div.content-wrapper {
+  border-radius: 50px;
+  padding: 50px;
+  background-color: #00000067;
+  margin-right: 20px;
+}
+
+.section.section-2 > .overlay {
+  align-items: start;
+}
+
+.section.section-2 > .overlay > div.content-wrapper h1,p,a {
+  margin-left: 30px;
+}
+
+.section.section-3 > .overlay > .content-wrapper h1,p,a {
+  margin-right: 30px;
+}
+
+.section.section-3 > .overlay > .content-wrapper h1 {
+  margin-right: 30px;
+  padding-left: 20px;
+}
+
+.section.section-3 > .overlay {
+  align-items: end;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* text-align: center; */
+}
+
+.overlay h1 {
+  font-size: 4em;
+  margin: 0;
+  color: #349eeb;
+}
+
+.overlay p {
+  font-size: 2em; 
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #349eeb;
+}
+
+.content-wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+}
+/* ABOUT US PAGE STYLING */
+
+div.about-us-page > .section.section-1 > .content-wrapper h1 {
+  display: flex;
+  align-items: start;
+}
+
+/* LOGIN PAGE STYLING */
+
+div.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 50px; */
+  /* margin-top: 30px;  */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+form.login-form {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.735);
+  width: 85%;
+  border-radius: 50px;
+}
+
+form.login-form button:hover {
+  background-color: #cd09fe;
+}
+
+form.login-form input {
+  width: 50%;
+}
+
+form.login-form h2 {
+  color: #349eeb;
+} 
+
+form.login-form h3 {
+  color: white;
+}
+
+form.login-form a {
+  color: white;
+}
+
+/* REGISTER PAGE STYLING */
+
+div.register {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+form.register-form {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #00000085;
+}
+
+form.register-form h3 {
+  color:white;
+}
+form.register-form input {
+  width: 30%;
+}
+
+div.please-login {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  color: white;
+}
+
+div.please-login a {
+  padding: 50px; 
+  font-size: x-large;
+  color: white
+}
+
+div.please-login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000af;
+  width: 50%;
+  margin-top: 300px;
+  border-radius: 25px;
+  justify-content: center;
+}
+
+/* ACCOUNT PAGE STYLING */
+
+.main-layout {
+    display: flex;
+    flex: 1; 
+    height: 100vh; 
+    /* overflow: hidden;  */
+  }
+  
+  .sidebar {
+    width: 400px; 
+    height: 100vh; 
+    background-color: #349feb; 
+    padding: 20px; 
+    overflow-y: auto;
+    /* border-right: 1px solid #ddd;  */
+  }
+  
+  .sidebar ul {
+    list-style-type: none; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0; 
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    font-size: large;
+    font-weight:bold; 
+    color: black; 
+    /* font-style: italic; */
+  }
+
+  .sidebar ul li a:hover {
+    color: white;
+  }
+
+  .active-link {
+    background-color: rgb(0, 0, 0); 
+    color: white !important; 
+    border-radius: 8px; 
+  }
+  
+  .content {
+    flex: 1; 
+    padding: 20px; 
+    width: 100%;
+    overflow-y: auto;
+  }
+
+
+
+/* MAIN CONTENT ACCOUNT PAGE STYLING */
+
+
+div.account-home {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        background-color: #349feb85;
+        border-radius: 25px;
+        padding: 35px;
+}
+
+/* GYM BOOKING STYLING */
+
+div.gym-bookings {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+div.gym-bookings form div {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px; 
+}
+
+div.gym-bookings form input {
+  width: 100%;
+}
+
+div.gym-bookings form select {
+  width: 100%;
+}
+
+div.current-gym-bookings {
+  margin-top: 25px; 
+  width: 75%; 
+  background-color: #349feb85;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+div.current-gym-bookings li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.current-gym-bookings button {
+  margin-top: 20px; 
+  margin-left: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #349eeb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  width: 25%;
+}
+
+div.current-gym-bookings button:hover {
+  background-color: darkred;
+}
+
+/* SAUNA BOOKING STYLING */
+
+div.sauna-bookings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.date-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.current-bookings {
+  margin-top: 25px; 
+  width: 75%; 
+  background-color: #349feb85;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+div.current-bookings ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.current-bookings button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.current-bookings button:hover {
+  background-color: darkred;
+}
+
+div.current-bookings ul {
+  padding: 0;
+}
+
+div.book-sauna-time, div.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  height: auto; 
+  max-height: 60vh; 
+}
+
+div.time-slots {
+  overflow-y: auto; 
+}
+
+div.overall-timeslots {
+  width: 80%;
+}
+
+div.overall-timeslots h3 {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+div.sauna-rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.sauna-bookings button {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 20px; 
+  font-weight: bold;
+  background-color: #349eef;
+  font-style: bold;
+  border-radius: 25px;
+  border-style: none;
+}
+
+div.book-sauna-time button:hover, div.time-slots button:hover {
+  background-color: #349feb89;
+}
+
+div.confirm-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #349feb4c;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+button.back-button {
+  background-color: #ccc;
+  color: #000;
+  margin-top: 10px;
+}
+
+/* UPCOMING RESERVATIONS PAGE STYLING */
+
+div.upcoming-reservations {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-color: #349feb4c;
+  border-radius: 25px;
+}
+
+div.reservations-gym-bookings{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.reservations-sauna-bookings{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ORDER PAGE STYLING */
+
+div.order-page {
+  overflow-y: auto;
+}
+
+div.order-page h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.menu-items-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+div.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;   
+  overflow-y: auto;
+}
+
+div.menu-item {
+  padding: 20px; 
+  margin: 20px; 
+  background-color: #349feb73;
+  width: 30%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.menu-item h2 {
+  padding-left: 20px;
+}
+
+div.menu-item img {
+  height: 110px; 
+  border-radius: 75px;
+}
+
+div.order-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #349eeb;
+  padding: 20px; 
+  border-radius: 25px;
+  min-width: 450px;
+  margin: 75px;
+  flex-shrink: 0; 
+  font-size: larger;
+  color: white;
+}
+
+div.order-summary img {
+  height: 50px; 
+  margin-right: 15px; 
+}
+
+div.order-summary button {
+  background-color: black;
+  color: white;
+  border-radius: 10px; 
+  height: 50px; 
+}
+
+div.order-summary button:hover {
+  background-color: rgb(46, 184, 46)
+}
+
+div.menu-items button {
+  background-color: black;
+  color: white; 
+  padding: 10px; 
+  border-radius: 10px;
+}
+
+div.menu-items button:hover {
+  background-color: #349eeb;
+}
+
+/* PROFILE PAGE STYLING */
+
+div.account-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-color: #349feb4c;
+  border-radius: 25px;
+  padding: 20px; 
+}
+
+div.account-information button {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; 
+  margin-left: 20px; 
+  font-weight: bold;
+  background-color: #349eef;
+  font-style: bold;
+  border-radius: 25px;
+  border-style: none;
+}
+
+div.account-information button:hover {
+  background-color: #349feb89;
+}
+
+  /* GENERAL FORM STYLING */
+
+form {
+    /* margin: 15px; */
+    padding: 15px;
+  }
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+form input,select {
+    width: 70%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+form select {
+    cursor: pointer;
+  }
+  
+form button {
+    margin: 10px; 
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+form button:hover {
+    background-color: #349eeb;
+  }
+
+  /* CONTACT US STYLING */
+
+  .contact-us-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh; 
+    background-size: cover; 
+    background-position: center;
+  }
+  
+  .contact-us-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #349eeb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #217dbb;
+  }
+  
+  .confirmation-message {
+    margin-top: 20px;
+    color: green;
+  }
